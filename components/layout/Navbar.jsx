@@ -139,6 +139,7 @@ export default function Navbar() {
               )
             ))}
 
+            {/* Contact button temporarily hidden - coming soon
             <Link 
               href="/contact"
               onClick={handleNavClick} 
@@ -148,6 +149,7 @@ export default function Navbar() {
             >
               Let's Talk
             </Link>
+            */}
           </div>
 
           {/* Mobile Toggle */}
@@ -198,6 +200,7 @@ export default function Navbar() {
                  )}
                </div>
             ))}
+            {/* Contact link temporarily hidden - coming soon
             <div className="overflow-hidden pt-6">
               <Link
                 href="/contact"
@@ -209,6 +212,7 @@ export default function Navbar() {
                 Contact Me
               </Link>
             </div>
+            */}
           </div>
         </div>
       </div>

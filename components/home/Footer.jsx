@@ -17,6 +17,7 @@ export default function Footer() {
             Experience Designer specialising in fintech, healthcare, and AI. I'm always interested in hearing about new projects and opportunities.
           </p>
 
+          {/* Contact link temporarily hidden - coming soon
           <Link 
             href="/contact" 
             className="group inline-flex items-center gap-2 text-xl font-medium border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors mb-12"
@@ -24,6 +25,7 @@ export default function Footer() {
             <span>Start a conversation</span>
             <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
+          */}
 
           <div className="space-y-6 mb-12">
             <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">Get in Touch</h3>

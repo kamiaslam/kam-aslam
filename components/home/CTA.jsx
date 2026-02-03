@@ -28,7 +28,7 @@ export default function CTA() {
             I'm always interested in hearing about new challenges, especially those involving complex problems, AI, fintech, or enterprise transformation.
           </p>
 
-          {/* CTA Button */}
+          {/* CTA Button temporarily hidden - coming soon
           <div className="mb-20">
             <Link 
               href="/contact"
@@ -39,6 +39,7 @@ export default function CTA() {
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={20} />
             </Link>
           </div>
+          */}
 
           {/* Social Media Links */}
           <div className="mb-20">
