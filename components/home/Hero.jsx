@@ -124,8 +124,8 @@ export default function Hero({ startAnimation = true }) {
             </div>
             
             {/* Decorative floating card */}
-            <div className="absolute bottom-10 -left-10 bg-white p-6 shadow-xl max-w-xs hidden md:block hero-meta z-20">
-              <p className="font-serif text-2xl italic text-gray-900 leading-snug">
+            <div className="absolute bottom-10 -left-10 bg-black text-white p-6 shadow-xl max-w-xs hidden md:block hero-meta z-20">
+              <p className="font-serif text-2xl italic leading-snug">
                 "{siteConfig.hero.quote.text}"
               </p>
               <p className="text-xs text-gray-400 mt-4 uppercase tracking-widest">{siteConfig.hero.quote.author}</p>

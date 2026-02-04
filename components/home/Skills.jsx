@@ -71,9 +71,9 @@ export default function Skills() {
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                
-               <div className="absolute bottom-8 left-8 right-8">
-                 <p className="font-serif text-2xl italic leading-snug mb-2">
-                   "Great design is invisible - it just works."
+               <div className="absolute bottom-8 left-8 right-8 bg-black text-white p-6 rounded-lg">
+                 <p className="font-serif text-xl md:text-2xl italic leading-snug mb-2">
+                   "Great design is invisible. When it works perfectly, people don't notice the design - they just notice their problem went away."
                  </p>
                  <p className="text-xs uppercase tracking-widest text-gray-400">Kam Aslam</p>
                </div>

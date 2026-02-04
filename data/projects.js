@@ -252,6 +252,249 @@ export const projects = [
   },
   {
     id: '03',
+    slug: 'aws-loti-data-platform',
+    title: 'AWS - LOTI Data Skills Platform',
+    category: 'Government / Public Sector',
+    client: 'AWS Institute / LOTI (London Office of Technology & Innovation)',
+    year: '2021',
+    role: 'Lead Product Designer',
+    services: 'Product Design, Data Visualisation, Design Sprints, UX Research',
+    description: 'Led design for a joint venture SaaS platform between AWS Institute and LOTI London, enabling 33 London boroughs to recruit, train, and share data talent for evidence-based decision-making, transforming how local government approaches data skills development.',
+    challenge: 'As part of an AWS-LOTI collaboration, we faced the challenge that London boroughs were struggling to recruit and retain data talent. There was no centralised model to visualise skills gaps, share resources across councils, or enable evidence-based workforce planning. Each borough operated in isolation, competing for the same limited talent pool while lacking visibility into their collective capabilities.',
+    solution: 'Through this AWS-LOTI joint venture, I led two intensive design sprints - the first focused on discovery and mapping the "Data Skills Landscape" across boroughs, the second on rapid prototyping and usability testing with council data analysts. Designed intuitive dashboards leveraging Amazon QuickSight and Tableau principles that allowed non-technical council leaders to visualise talent density and skills gaps. Created a scalable architecture supporting collaboration between distinct boroughs while maintaining data governance.',
+    outcome: 'Delivered a robust SaaS platform that enables evidence-based policy improvements and cross-council collaboration. The AWS-LOTI platform now supports LOTI\'s communities of practice, enabling councils to share knowledge, track skills development, and foster collaboration across London\'s 33 boroughs. Empowered local government teams to upskill, connect, and drive evidence-based service improvements.',
+    image: '/images/loti-aws-journey-map.png',
+    details: ['Data Visualisation', 'SaaS Platform', 'Design Sprints', 'Public Sector', 'Dashboard Design'],
+    screens: [
+      '/images/loti-capabilities-screen.png'
+    ],
+    figmaLink: 'https://www.figma.com/design/fGu1TnPN1ewGD193yCvPBi/AWS---Loti-London-Project-2101-2022?node-id=10-1384&t=J2iahXf1me85W4Sf-1',
+    
+    extended: {
+      duration: 'June 2021 - September 2021',
+      team: 'LOTI Data Analysts, Product Managers, Startup Founders, Borough Representatives',
+      tools: ['Figma', 'Amazon QuickSight', 'Tableau', 'Miro', 'UserTesting'],
+      
+      problemStatement: 'As part of a joint venture between AWS Institute and LOTI London, we tackled the challenge that London boroughs were operating in silos when it came to data talent. They competed for the same limited pool of data professionals, had no visibility into collective skills gaps, and lacked a framework for sharing expertise across council boundaries. This fragmented approach was hindering evidence-based decision-making at a time when data-driven policy was becoming critical.',
+      
+      keyIssues: [
+        'No centralised visibility into data skills across 33 London boroughs',
+        'Boroughs competing for same limited talent pool rather than collaborating',
+        'Council leaders couldn\'t quantify skills gaps to justify training investment',
+        'No mechanism for sharing data expertise between boroughs',
+        'Disconnect between data team capabilities and policy needs'
+      ],
+      
+      context: {
+        client: 'LOTI (London Office of Technology & Innovation)',
+        partnership: 'AWS Institute - Joint Venture Project',
+        projectType: 'Collaboration between AWS and LOTI London',
+        scope: '33 London borough councils',
+        objective: 'Create a shared platform for data talent development and resource sharing'
+      },
+      
+      researchMethods: [
+        'Stakeholder interviews with LOTI leadership and borough data leads',
+        'Mapping the "Data Skills Landscape" across participating boroughs',
+        'Workshops with council data analysts to understand daily challenges',
+        'Competitive analysis of existing talent management platforms',
+        'User interviews with non-technical council leaders to understand data needs'
+      ],
+      
+      keyInsights: [
+        { 
+          title: 'Isolation Problem', 
+          detail: 'Each borough had built bespoke approaches to data skills development with no visibility into what other councils were doing or what skills existed nearby.' 
+        },
+        { 
+          title: 'Leadership Gap', 
+          detail: 'Non-technical council leaders struggled to understand data capabilities, making it difficult to advocate for investment or make evidence-based decisions.' 
+        },
+        { 
+          title: 'Talent Scarcity', 
+          detail: 'Boroughs were competing for the same small pool of data professionals rather than developing shared resources or talent pipelines.' 
+        },
+        { 
+          title: 'Knowledge Silos', 
+          detail: 'Best practices and successful approaches weren\'t being shared between councils, leading to repeated mistakes and missed opportunities.' 
+        },
+        { 
+          title: 'Quantification Challenge', 
+          detail: 'Without clear metrics on skills gaps, boroughs couldn\'t build business cases for training budgets or new hires.' 
+        }
+      ],
+      
+      designSprints: [
+        {
+          sprint: 1,
+          name: 'Discovery Sprint',
+          duration: '1 week',
+          focus: 'Understanding the problem space',
+          activities: [
+            'Stakeholder interviews with LOTI leadership',
+            'Mapping the current "Data Skills Landscape"',
+            'Identifying key user personas across boroughs',
+            'Defining success metrics for the platform',
+            'Prioritising features through dot voting'
+          ],
+          outputs: [
+            'Skills gap heat map across boroughs',
+            'User persona definitions (Council Leader, Data Analyst, HR Lead)',
+            'Feature prioritisation matrix',
+            'Technical constraints documentation'
+          ]
+        },
+        {
+          sprint: 2,
+          name: 'Prototyping Sprint',
+          duration: '1 week',
+          focus: 'Rapid design and validation',
+          activities: [
+            'Rapid wireframing of key user flows',
+            'High-fidelity dashboard prototyping',
+            'Usability testing with council data analysts',
+            'Iteration based on user feedback',
+            'Handoff preparation for development'
+          ],
+          outputs: [
+            'Interactive Figma prototype',
+            'Dashboard design system components',
+            'Usability test findings report',
+            'Development specification documentation'
+          ]
+        }
+      ],
+      
+      designPrinciples: [
+        { 
+          title: 'Clarity for Non-Technical Users', 
+          detail: 'Council leaders aren\'t data experts. Every visualisation needed to communicate insights at a glance without requiring technical knowledge.' 
+        },
+        { 
+          title: 'Actionable Intelligence', 
+          detail: 'Data without action is useless. Every dashboard element was designed to prompt a decision or next step.' 
+        },
+        { 
+          title: 'Collaboration by Default', 
+          detail: 'The platform architecture assumed cross-borough sharing, making collaboration the path of least resistance.' 
+        },
+        { 
+          title: 'Scalable Foundation', 
+          detail: 'Designed for 33 boroughs with potential to scale to other UK regions. Component-based architecture allowed rapid customisation.' 
+        },
+        { 
+          title: 'Data Governance Built-In', 
+          detail: 'Respected the autonomy of individual boroughs while enabling aggregated insights at the LOTI level.' 
+        }
+      ],
+      
+      solutionDetails: {
+        headline: 'Making Complex Data Actionable',
+        components: [
+          {
+            name: 'Skills Density Dashboard',
+            description: 'Interactive heat map showing data talent distribution across London boroughs. Enabled leaders to identify skills clusters and gaps at a glance.',
+            insight: 'Leveraged Amazon QuickSight patterns to create familiar, intuitive visualisations for users already working with AWS tools.'
+          },
+          {
+            name: 'Capacity Planning Module',
+            description: 'Forecasting tool allowing boroughs to model future skills needs based on policy priorities and project pipelines.',
+            insight: 'Used Tableau-style progressive disclosure - summary view for executives, drill-down for analysts.'
+          },
+          {
+            name: 'Talent Sharing Network',
+            description: 'Marketplace-style interface connecting boroughs with available expertise to those with specific project needs.',
+            insight: 'Designed trust indicators and previous collaboration history to reduce friction in cross-borough partnerships.'
+          },
+          {
+            name: 'Training & Development Tracker',
+            description: 'Individual and team skills progression tracking with recommended learning pathways based on borough priorities.',
+            insight: 'Gamification elements to encourage ongoing engagement without feeling corporate or patronising.'
+          }
+        ]
+      },
+      
+      dataVisualisationApproach: {
+        headline: 'Visualising Capacity for Non-Technical Leaders',
+        principles: [
+          'Used familiar visual metaphors (traffic lights, heat maps) to communicate complex data',
+          'Designed for "glanceability" - key insights visible within 3 seconds',
+          'Progressive disclosure: summary → detail → raw data, based on user need',
+          'Consistent colour coding across all visualisations for faster comprehension',
+          'Always paired numbers with context (benchmarks, trends, comparisons)'
+        ],
+        tools: [
+          'Amazon QuickSight integration for AWS ecosystem compatibility',
+          'Tableau design patterns for proven data visualisation UX',
+          'Custom Figma components for prototype fidelity'
+        ]
+      },
+      
+      accessibilityFeatures: [
+        'Colour-blind safe palette with pattern differentiation',
+        'Screen reader compatible data tables as alternative to charts',
+        'Keyboard navigation for all dashboard interactions',
+        'Plain language explanations for all metrics',
+        'Mobile-responsive design for council leaders on the move'
+      ],
+      
+      testingApproach: {
+        participants: 'Council data analysts from 5 participating boroughs',
+        method: 'Moderated usability testing via video call',
+        tasks: [
+          'Find the current data skills gap for your borough',
+          'Identify a neighbouring borough with complementary skills',
+          'Create a training plan for your team',
+          'Generate a report for your council leader'
+        ],
+        keyFindings: [
+          'Users expected geographic map view - added London borough map visualisation',
+          'Terminology confusion between "capacity" and "capability" - standardised language',
+          'Leaders wanted exportable reports for committee meetings - added PDF export',
+          'Analysts wanted more granular skill categorisation - expanded taxonomy'
+        ]
+      },
+      
+      quantitativeResults: [
+        { metric: 'Boroughs Supported', before: '0', after: '33', change: 'Full London coverage' },
+        { metric: 'Design Sprint Duration', before: 'N/A', after: '2 weeks', change: 'Discovery to prototype' },
+        { metric: 'User Personas Served', before: 'N/A', after: '3', change: 'Leaders, Analysts, HR' },
+        { metric: 'Dashboard Components', before: 'N/A', after: '12', change: 'Reusable system' },
+        { metric: 'Usability Test Success', before: 'N/A', after: '85%', change: 'Task completion rate' }
+      ],
+      
+      qualitativeOutcomes: [
+        'Enabled evidence-based policy improvements across London councils',
+        'Created framework for cross-borough data talent collaboration',
+        'Empowered non-technical leaders to understand and advocate for data investment',
+        'Established reusable design patterns for future LOTI platforms',
+        'Supported LOTI\'s communities of practice with shared visibility'
+      ],
+      
+      businessImpact: 'The AWS-LOTI joint venture platform now supports LOTI\'s mission to make London the most collaborative city in the world for public sector innovation. It enables 33 borough councils to share knowledge, track skills development across the capital, and make evidence-based decisions about data talent investment. The design system created during this AWS collaboration has been reused for subsequent LOTI digital initiatives.',
+      
+      testimonial: {
+        quote: 'Kam\'s ability to translate our complex requirements into intuitive visualisations was exceptional. He understood that our users aren\'t data scientists - they\'re council leaders who need to make decisions quickly. The platform he designed makes complex data accessible to everyone.',
+        author: 'LOTI Project Lead',
+        role: 'London Office of Technology & Innovation'
+      },
+      
+      learnings: [
+        'Design sprints are perfect for public sector innovation - they create momentum in traditionally slow-moving organisations',
+        'Data visualisation for non-technical users requires ruthless simplification - if it needs explanation, it needs redesign',
+        'Cross-organisational platforms need to balance individual autonomy with collective benefit',
+        'Prototyping with real data (even sample data) reveals issues that placeholder content never will',
+        'Public sector users are sophisticated - they appreciate good design and will champion it internally'
+      ],
+      
+      figmaPrototype: {
+        url: 'https://www.figma.com/design/fGu1TnPN1ewGD193yCvPBi/AWS---Loti-London-Project-2101-2022?node-id=10-1384&t=J2iahXf1me85W4Sf-1',
+        label: 'View Figma Prototype'
+      }
+    }
+  },
+  {
+    id: '04',
     slug: 'hsbc-digital-transformation',
     title: 'HSBC Business Banking Platform',
     category: 'Enterprise Banking',
@@ -465,7 +708,7 @@ export const projects = [
     }
   },
   {
-    id: '04',
+    id: '05',
     slug: 'praxia-bank',
     title: 'Praxia Bank',
     category: 'Mobile Banking',
@@ -486,7 +729,7 @@ export const projects = [
     ]
   },
   {
-    id: '05',
+    id: '06',
     slug: 'nationwide-later-life',
     title: 'Later Life Mortgages',
     category: 'Financial Services',
@@ -662,7 +905,7 @@ export const projects = [
     }
   },
   {
-    id: '06',
+    id: '07',
     slug: 'style-com',
     title: 'Style.com',
     category: 'E-commerce',
@@ -683,7 +926,7 @@ export const projects = [
     ]
   },
   {
-    id: '07',
+    id: '08',
     slug: 'conde-nast-magazines',
     title: 'Vogue & GQ Digital',
     category: 'Digital Publishing',

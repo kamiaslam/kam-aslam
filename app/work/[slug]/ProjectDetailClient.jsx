@@ -123,7 +123,42 @@ export default function ProjectDetailClient({ project, nextProject }) {
             </div>
           )}
         </div>
+      </Container>
 
+      {/* Figma Prototype Link */}
+      {(project.figmaLink || project.extended?.figmaPrototype) && (
+        <div className="animate-up py-8 border-b border-gray-100">
+          <Container>
+            <a 
+              href={project.figmaLink || project.extended.figmaPrototype.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl hover:from-purple-100 hover:to-pink-100 transition-all duration-300"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                  <svg width="24" height="24" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                    <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                    <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                    <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                    <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                  </svg>
+                </div>
+                <div>
+                  <span className="block text-sm font-bold text-gray-900">
+                    {project.extended?.figmaPrototype?.label || 'View Design Files'}
+                  </span>
+                  <span className="text-xs text-gray-500">Open in Figma</span>
+                </div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all" />
+            </a>
+          </Container>
+        </div>
+      )}
+
+      <Container>
         {/* Challenge & Solution */}
         <div className="grid md:grid-cols-12 gap-12 md:gap-24 py-24 md:py-32">
           <div className="md:col-span-4 animate-up">
@@ -221,6 +256,62 @@ export default function ProjectDetailClient({ project, nextProject }) {
         </section>
       )}
 
+      {/* Design Sprint Timeline */}
+      {hasExtended && project.extended.designSprints && (
+        <section className="py-24 bg-black text-white">
+          <Container>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 block">Process</span>
+              <h3 className="text-3xl md:text-4xl font-serif">Design Sprint Approach</h3>
+              <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+                Intensive, time-boxed sprints to move from ambiguity to validated prototype
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+              {project.extended.designSprints.map((sprint, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center text-xl font-bold">
+                      {sprint.sprint}
+                    </span>
+                    <div>
+                      <h4 className="text-xl font-bold">{sprint.name}</h4>
+                      <span className="text-sm text-gray-400">{sprint.duration}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6 text-sm">{sprint.focus}</p>
+                  
+                  <div className="mb-6">
+                    <h5 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Activities</h5>
+                    <ul className="space-y-2">
+                      {sprint.activities.map((activity, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-gray-400">
+                          <span className="w-1.5 h-1.5 rounded-full bg-white mt-2 flex-shrink-0"></span>
+                          {activity}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h5 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Outputs</h5>
+                    <div className="flex flex-wrap gap-2">
+                      {sprint.outputs.map((output, k) => (
+                        <span key={k} className="px-3 py-1 bg-white/10 rounded-full text-xs text-gray-300">
+                          {output}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Key Insights Section */}
       {hasExtended && project.extended.keyInsights && (
         <section className="py-24 bg-gray-50">
@@ -258,6 +349,82 @@ export default function ProjectDetailClient({ project, nextProject }) {
                       <p className="text-gray-600">{principle.detail}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Solution Details Section */}
+      {hasExtended && project.extended.solutionDetails && (
+        <section className="py-24 bg-gray-50">
+          <Container>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 block">Solution</span>
+              <h3 className="text-3xl md:text-4xl font-serif">{project.extended.solutionDetails.headline}</h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {project.extended.solutionDetails.components.map((component, i) => (
+                <div key={i} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <h4 className="text-xl font-bold pt-1">{component.name}</h4>
+                  </div>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{component.description}</p>
+                  {component.insight && (
+                    <div className="pt-4 border-t border-gray-100">
+                      <p className="text-sm text-gray-500 italic">
+                        <span className="font-medium text-gray-700">Design insight:</span> {component.insight}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Data Visualisation Approach */}
+      {hasExtended && project.extended.dataVisualisationApproach && (
+        <section className="py-24">
+          <Container>
+            <div className="grid md:grid-cols-12 gap-12 items-start">
+              <div className="md:col-span-5">
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 block">Data Visualisation</span>
+                <h3 className="text-3xl md:text-4xl font-serif mb-6">{project.extended.dataVisualisationApproach.headline}</h3>
+                
+                {project.extended.dataVisualisationApproach.tools && (
+                  <div className="mt-8">
+                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">Tools & Platforms</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.extended.dataVisualisationApproach.tools.map((tool, i) => (
+                        <span key={i} className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              <div className="md:col-span-7">
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+                  <h4 className="font-bold text-lg mb-6">Design Principles for Data</h4>
+                  <ul className="space-y-4">
+                    {project.extended.dataVisualisationApproach.principles.map((principle, i) => (
+                      <li key={i} className="flex items-start gap-4">
+                        <span className="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                          {i + 1}
+                        </span>
+                        <p className="text-gray-700">{principle}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
