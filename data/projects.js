@@ -778,16 +778,40 @@ export const projects = [
       
       designSprints: [
         {
-          sprint: 'Sprint 1: The Backbone',
+          sprint: 1,
+          name: 'The Backbone',
+          duration: '1 week',
           focus: 'Eligibility vs. Affordability logic',
-          breakthrough: 'Moved team away from "Lorem Ipsum" and forced use of real, messy financial data early on',
-          outcome: 'Established foundation for accurate, realistic design'
+          activities: [
+            'Moved team away from "Lorem Ipsum" and forced use of real, messy financial data early on',
+            'Mapped eligibility criteria and affordability calculations',
+            'Prototyped logic flows with actual customer scenarios',
+            'Tested with mortgage consultants for accuracy'
+          ],
+          outputs: [
+            'Eligibility logic framework',
+            'Affordability calculation model',
+            'Realistic data prototypes',
+            'Foundation for accurate design'
+          ]
         },
         {
-          sprint: 'Sprint 2: The Refinement',
+          sprint: 2,
+          name: 'The Refinement',
+          duration: '1 week',
           focus: 'Product Comparison',
-          innovation: 'Instead of dense tables, designed "Outcome Cards" visualizing impact of three core paths: Capital + Interest, Interest Only, and Interest Roll-Up',
-          outcome: 'Made complex financial products understandable at a glance'
+          activities: [
+            'Instead of dense tables, designed "Outcome Cards"',
+            'Visualized impact of three core paths: Capital + Interest, Interest Only, and Interest Roll-Up',
+            'Iterated with customer feedback',
+            'Simplified complex financial product comparisons'
+          ],
+          outputs: [
+            'Outcome Cards design',
+            'Product comparison module',
+            'Simplified visualization patterns',
+            'Complex products made understandable'
+          ]
         }
       ],
       
