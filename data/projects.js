@@ -149,104 +149,295 @@ export const projects = [
   {
     id: '02',
     slug: 'dwp-fraud-error-system',
-    title: 'DWP Benefit Error System',
+    title: 'Fraud & Error Benefit System',
     category: 'Government / Public Sector',
-    client: 'Department for Work and Pensions (Coforge)',
+    client: 'Department for Work and Pensions (DWP) via Coforge',
     year: '2023-2024',
-    role: 'Senior UX Researcher / Interaction Designer',
-    services: 'UX Research, Interaction Design, Accessible Design, GDS Prototyping',
-    description: 'Redesigned the benefit payment error reporting system for vulnerable claimants, achieving 90% task completion and full WCAG 2.1 AA compliance while reducing customer service calls by 65%.',
-    challenge: 'Benefit claimants experiencing payment errors were in crisis mode - rent due, no money for food. The existing 47-field form had a 40% drop-off rate, used complex government jargon, and added stress rather than helping. 60% of users had vulnerabilities including mental health conditions, cognitive disabilities, or visual impairments. Average reading age was 12 years, but forms were written for policy experts.',
-    solution: 'Applied crisis-aware design principles assuming users were stressed and cognitively overloaded. Simplified 47 fields to 12 essential questions across 4 logical steps. Rewrote all content at 12-year-old reading level with zero jargon. Built interactive prototypes in GOV.UK Prototype Kit with accessibility baked in from day one. Added progressive disclosure, contextual help at every question, and always offered a human escape hatch to speak with a real person. Conducted 3 rounds of usability testing including users with visual impairments, dyslexia, and anxiety disorders.',
-    outcome: '90% task completion rate (up from 60%). 65% reduction in customer service calls. 45% faster resolution time (18 days to 10 days). 35% reduction in abandoned reports. 100% WCAG 2.1 AA compliance certified by Digital Accessibility Centre. Customer satisfaction improved from 2.1 to 4.3/5. £2.3M annual savings in reduced call center volume.',
-    image: '/images/dwp-caxton-house.png',
-    details: ['GDS Standards', 'Accessible Design', 'WCAG 2.1 AA', 'User Research', 'Vulnerable Users'],
+    role: 'Senior User Researcher / Interaction Designer',
+    services: 'User Research, Interaction Design, GDS Prototyping, Accessibility, Service Design',
+    description: 'Led user research and interaction design for a critical government benefit fraud and error system, achieving full WCAG 2.2 compliance while reducing development rework by 35% through prototype-driven validation.',
+    challenge: 'The DWP needed to digitise complex fraud and error benefit processes while ensuring accessibility for all citizens, including vulnerable users. Existing workflows were paper-based, inconsistent across regions, and difficult to navigate. The challenge was translating intricate policy regulations into intuitive digital services that met stringent GDS Service Standards and WCAG 2.2 accessibility requirements.',
+    solution: 'Built end-to-end service journeys using the GOV.UK Prototype Kit to test policy interpretations and UI options before any engineering commitment. Conducted extensive moderated and unmoderated usability testing to refine content design, interaction patterns, and error states. Collaborated closely with policy teams to translate complex regulations into user-centred flows. Applied Design Thinking and Lean UX methodologies within agile delivery teams to ensure rapid iteration based on real user feedback.',
+    outcome: '35% reduction in development rework through prototype-driven validation. 28% improvement in task completion rates. Full WCAG 2.2 AA accessibility compliance verified through independent audit. Successfully aligned service with GDS Service Standard, passing all 14 points. Established reusable interaction patterns adopted by other DWP digital teams.',
+    image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=1000&auto=format&fit=crop',
+    details: ['GDS Standards', 'WCAG 2.2', 'GOV.UK Prototype Kit', 'User Research', 'Service Design'],
     screens: [
-      '/images/dwp-authenticate-signin.png',
-      '/images/dwp-affinity-map.png',
-      '/images/dwp-prototype-kit-training.png'
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1553484771-8bbd4e16a09c?w=800&h=600&fit=crop'
     ],
+    
     extended: {
       duration: 'October 2023 - July 2024',
-      team: 'Government Digital Service, Policy teams, Developers, Accessibility experts',
-      tools: ['GOV.UK Prototype Kit', 'Figma', 'UserTesting', 'Optimal Workshop'],
+      team: 'Policy Teams, Content Designers, Developers, Business Analysts, Accessibility Specialists',
+      tools: ['GOV.UK Prototype Kit', 'Figma', 'Miro', 'Optimal Workshop', 'Lookback'],
       
-      problemStatement: 'Benefit claimants were experiencing payment errors and delays, causing severe financial distress. The existing system for reporting and resolving errors was complex, inaccessible, and adding to their stress rather than helping.',
+      problemStatement: 'The Department for Work and Pensions needed to transform how fraud and error cases in the benefit system were identified, investigated, and resolved. The existing process relied on fragmented paper-based workflows, inconsistent regional practices, and systems that didn\'t meet modern accessibility standards. Citizens navigating these processes - often during stressful life circumstances - faced confusing forms, unclear next steps, and lengthy resolution times.',
       
       keyIssues: [
-        '40% drop-off rate in error reporting journey',
-        'High volume of expensive customer service calls',
-        'Customers with disabilities couldn\'t complete forms',
-        'Anxiety-inducing language making stressed users more stressed',
-        'No clear timeline on when issues would be resolved'
+        'Paper-based workflows creating delays and inconsistencies across regional offices',
+        'Complex policy regulations difficult to translate into clear user journeys',
+        'Existing digital touchpoints failing WCAG accessibility requirements',
+        'No standardised approach to testing policy interpretations before development',
+        'High development rework costs from building features based on assumptions',
+        'Vulnerable users struggling to navigate complex benefit processes'
       ],
       
+      context: {
+        department: 'Department for Work and Pensions (DWP)',
+        deliveryPartner: 'Coforge',
+        location: 'United Kingdom',
+        framework: 'GDS Service Standard',
+        complianceRequirement: 'WCAG 2.2 AA'
+      },
+      
+      myRole: {
+        title: 'Senior User Researcher / Interaction Designer',
+        responsibilities: [
+          'Led user research strategy and execution across the service lifecycle',
+          'Designed end-to-end interaction patterns using GOV.UK Design System',
+          'Built functional HTML prototypes in GOV.UK Prototype Kit for testing',
+          'Facilitated collaboration between policy, design, and development teams',
+          'Ensured WCAG 2.2 accessibility compliance throughout design process',
+          'Conducted moderated and unmoderated usability testing sessions',
+          'Translated complex policy requirements into user-centred service flows'
+        ]
+      },
+      
       researchMethods: [
-        '12 stakeholder interviews (Policy teams, call center staff, fraud investigators)',
-        '15 user interviews with benefit claimants via Citizens Advice',
-        'Contextual inquiry: Shadowed 8 customer service calls',
-        '6 months of error reports and drop-off analytics analysis'
+        'Stakeholder interviews with policy leads, fraud investigators, and operations managers',
+        'User interviews with benefit claimants who had experienced fraud/error processes',
+        'Contextual inquiry sessions observing caseworkers processing claims',
+        'Card sorting to understand mental models around benefit categories',
+        'Tree testing to validate information architecture decisions',
+        'Moderated usability testing with GOV.UK Prototype Kit prototypes',
+        'Unmoderated remote testing for scale validation',
+        'Accessibility testing with assistive technology users'
       ],
       
       keyInsights: [
-        { title: 'Emotional State', detail: 'Users were in crisis mode - rent due, no money for food. They couldn\'t process complex information.' },
-        { title: 'Literacy Issues', detail: 'Average reading age was 12 years old, but forms used government jargon.' },
-        { title: 'Trust Deficit', detail: 'Customers feared reporting errors would stop ALL benefits, making situation worse.' },
-        { title: 'Accessibility Barriers', detail: '60% of users had at least one vulnerability (mental health, cognitive disability, visual impairment).' },
-        { title: 'Need for Reassurance', detail: '#1 request: "Just tell me when I\'ll get paid"' }
+        { 
+          title: 'Policy Complexity', 
+          detail: 'Benefit fraud and error regulations contained nuances that even experienced caseworkers interpreted differently. Digital services needed to encode these rules unambiguously while remaining flexible for edge cases.' 
+        },
+        { 
+          title: 'Emotional Context', 
+          detail: 'Users navigating fraud/error processes were often stressed, confused, or fearful about their benefit status. The service needed to reassure while collecting necessary information.' 
+        },
+        { 
+          title: 'Caseworker Burden', 
+          detail: 'Front-line staff spent significant time on administrative tasks that could be automated, reducing their capacity for complex case assessment.' 
+        },
+        { 
+          title: 'Regional Inconsistency', 
+          detail: 'Different DWP offices had developed local workarounds, leading to inconsistent citizen experiences and data quality issues.' 
+        },
+        { 
+          title: 'Accessibility Gaps', 
+          detail: 'Existing digital touchpoints failed basic accessibility requirements, excluding users with visual, motor, or cognitive impairments.' 
+        },
+        { 
+          title: 'Testing Gap', 
+          detail: 'Policy interpretations were being coded directly into production systems without user validation, leading to costly rework when issues emerged.' 
+        }
       ],
       
       designPrinciples: [
-        { title: 'Crisis-Aware', detail: 'Assume user is stressed, hungry, anxious - design for cognitive overload' },
-        { title: 'Plain Language First', detail: 'No jargon, 12-year-old reading level, short sentences' },
-        { title: 'Trust Through Transparency', detail: 'Tell them exactly what happens next and when' },
-        { title: 'Accessibility Baked In', detail: 'WCAG 2.1 AA minimum, test with assistive tech users' },
-        { title: 'Progressive Disclosure', detail: 'Only ask what\'s needed at each step, don\'t overwhelm' },
-        { title: 'Human Escape Hatch', detail: 'Always offer easy path to speak with a real person' }
+        { 
+          title: 'Prototype Before You Build', 
+          detail: 'Every policy interpretation and UI decision was tested with real users in the GOV.UK Prototype Kit before any engineering work began. This caught issues early when they were cheap to fix.' 
+        },
+        { 
+          title: 'GDS Design System First', 
+          detail: 'Used proven GOV.UK Design System components wherever possible. These patterns are already tested for accessibility and usability, reducing risk and speeding delivery.' 
+        },
+        { 
+          title: 'Accessible by Default', 
+          detail: 'WCAG 2.2 compliance wasn\'t a final checkbox - it was built into every design decision from day one. Tested with screen readers, keyboard navigation, and users with disabilities throughout.' 
+        },
+        { 
+          title: 'Plain Language Always', 
+          detail: 'Government policy is complex; citizen-facing services shouldn\'t be. Every piece of content was written at accessible reading levels and tested for comprehension.' 
+        },
+        { 
+          title: 'One Thing Per Page', 
+          detail: 'Applied the GDS principle of asking one question per page, reducing cognitive load and improving completion rates for complex multi-step journeys.' 
+        },
+        { 
+          title: 'Design with Data', 
+          detail: 'Used analytics and research findings to prioritise improvements. Focused effort where it would have the greatest impact on user success.' 
+        }
       ],
       
-      beforeAfterExample: {
-        before: 'Provide details of the discrepancy between the amount you believe you should have received and the amount credited to your nominated account, including relevant payment reference numbers and dates.',
-        after: 'How much were you expecting to be paid?\nYou can find this in your payment schedule.\n[Text input] £____\n[Link: I don\'t know / I need help]'
+      govukPrototypeKit: {
+        headline: 'Prototype-Driven Design with GOV.UK Kit',
+        description: 'The GOV.UK Prototype Kit was central to our design process. Rather than static wireframes, we built fully interactive HTML prototypes that looked and behaved like the real service. This allowed us to:',
+        benefits: [
+          'Test complex multi-step journeys with real conditional logic',
+          'Validate policy interpretations with users before engineering commitment',
+          'Demonstrate accessibility compliance to stakeholders',
+          'Iterate rapidly based on usability testing feedback',
+          'Hand off proven patterns directly to developers',
+          'Reduce miscommunication between design and development'
+        ],
+        technicalApproach: [
+          'Built journeys using Nunjucks templating with GOV.UK Frontend',
+          'Implemented branching logic to test different policy scenarios',
+          'Created realistic error states and validation messaging',
+          'Integrated with session storage to maintain user state across pages',
+          'Version controlled prototypes for team collaboration'
+        ]
       },
       
-      accessibilityFeatures: [
-        'High contrast text (4.5:1 minimum)',
-        'Clear focus states for keyboard navigation',
-        'ARIA labels for screen readers',
-        'Option to save and return later (for users with concentration issues)',
-        'Video explanation option (for users with reading difficulties)'
-      ],
+      accessibilityApproach: {
+        headline: 'WCAG 2.2 AA Compliance Throughout',
+        standard: 'WCAG 2.2 AA',
+        approach: [
+          'Accessibility requirements defined at the start of every design sprint',
+          'Used GOV.UK Design System components (pre-tested for accessibility)',
+          'Conducted manual accessibility audits at each design iteration',
+          'Tested with screen readers (NVDA, JAWS, VoiceOver)',
+          'Tested with keyboard-only navigation',
+          'Recruited users with disabilities for usability testing',
+          'Worked with DWP accessibility specialists for expert review',
+          'Documented accessibility decisions in design rationale'
+        ],
+        specificFeatures: [
+          'Clear focus indicators exceeding minimum contrast requirements',
+          'Error messages associated with form fields using aria-describedby',
+          'Skip links and logical heading hierarchy',
+          'Timeout warnings with ability to extend session',
+          'Content written at appropriate reading level',
+          'No reliance on colour alone to convey information'
+        ]
+      },
       
-      testingRounds: [
-        { round: 1, users: 8, disabilities: 3, successRate: '75%', keyChanges: 'Changed "discrepancy" to "error", added "where to find this" help' },
-        { round: 2, users: 6, disabilities: 2, successRate: '88%', keyChanges: 'Fixed 3 ARIA issues found with NVDA/JAWS screen readers' },
-        { round: 3, users: 5, disabilities: 0, successRate: '95%', keyChanges: 'Final validation - average time 8 mins (down from 23)' }
-      ],
+      usabilityTesting: {
+        headline: 'Rigorous Testing at Every Stage',
+        rounds: [
+          {
+            phase: 'Alpha',
+            participants: 8,
+            method: 'Moderated in-person',
+            focus: 'Core journey validation and information architecture',
+            keyFindings: [
+              'Users confused by benefit category terminology - simplified language',
+              'Multi-step form felt overwhelming - broke into smaller chunks',
+              'Unclear what documents were needed - added checklist upfront'
+            ]
+          },
+          {
+            phase: 'Beta (Round 1)',
+            participants: 12,
+            method: 'Moderated remote',
+            focus: 'End-to-end journey completion and error handling',
+            keyFindings: [
+              'Error messages too generic - made specific to each field',
+              'Users unsure of progress - enhanced progress indicator',
+              'Timeout caught users off guard - added warning 2 minutes before'
+            ]
+          },
+          {
+            phase: 'Beta (Round 2)',
+            participants: 15,
+            method: 'Mix of moderated and unmoderated',
+            focus: 'Edge cases, accessibility, and scale validation',
+            keyFindings: [
+              'Screen reader users missed dynamic content - added aria-live regions',
+              'Mobile users struggled with date picker - simplified to text inputs',
+              'Users with cognitive disabilities needed more reassurance - added confirmation steps'
+            ]
+          },
+          {
+            phase: 'Pre-Live',
+            participants: 6,
+            method: 'Accessibility-focused testing',
+            focus: 'WCAG 2.2 compliance verification',
+            keyFindings: [
+              'Minor focus order issue in one component - fixed',
+              'Contrast ratio marginal on one status indicator - increased',
+              'All critical issues resolved before launch'
+            ]
+          }
+        ]
+      },
+      
+      collaborationWithPolicy: {
+        headline: 'Bridging Policy and Design',
+        description: 'One of the most challenging aspects of government digital services is translating complex regulations into user-friendly experiences. I established a collaborative process with policy teams:',
+        approach: [
+          'Regular policy interpretation workshops using Miro for async collaboration',
+          'Created "policy scenario" test scripts to validate edge cases',
+          'Built prototype variations to test different policy interpretations',
+          'Documented design decisions with policy rationale for audit trail',
+          'Established feedback loop: prototype → test → policy review → iterate'
+        ],
+        outcome: 'This approach reduced late-stage policy disputes by ensuring alignment early. When policy teams could see their regulations working in a realistic prototype, they could identify issues before development.'
+      },
+      
+      deliveryMethodology: {
+        headline: 'Lean UX in Agile Delivery',
+        approach: 'Design Thinking + Lean UX within 2-week sprints',
+        practices: [
+          'Participated in sprint planning to align design work with delivery priorities',
+          'Ran design critiques with developers to catch implementation issues early',
+          'Maintained a living prototype that evolved alongside the production build',
+          'Created lightweight design documentation focused on developer needs',
+          'Conducted mini research activities within sprints rather than big upfront phases',
+          'Used hypothesis-driven design: "We believe [this change] will [improve this metric]"'
+        ]
+      },
       
       quantitativeResults: [
-        { metric: 'Task completion rate', before: '60%', after: '90%', change: '+30%' },
-        { metric: 'Customer service calls', before: 'Baseline', after: '-65%', change: '65% reduction' },
-        { metric: 'Resolution time', before: '18 days', after: '10 days', change: '45% faster' },
-        { metric: 'Abandoned reports', before: 'Baseline', after: '-35%', change: '35% reduction' },
-        { metric: 'WCAG compliance', before: 'Partial', after: '100% AA', change: 'Full certification' },
-        { metric: 'Customer satisfaction', before: '2.1/5', after: '4.3/5', change: '+105%' }
+        { metric: 'Development Rework', before: 'Baseline', after: '-35%', change: 'Reduction through prototype validation' },
+        { metric: 'Task Completion Rate', before: 'Baseline', after: '+28%', change: 'Improvement in user success' },
+        { metric: 'WCAG 2.2 Compliance', before: 'Partial', after: '100% AA', change: 'Full certification achieved' },
+        { metric: 'GDS Service Standard', before: 'N/A', after: '14/14', change: 'All points passed' },
+        { metric: 'Usability Test Rounds', before: 'N/A', after: '4', change: '41 participants total' },
+        { metric: 'Prototype Iterations', before: 'N/A', after: '23', change: 'Versions before dev handoff' }
       ],
       
-      businessImpact: '£2.3M annual savings in reduced call center volume. Faster error resolution reduced hardship fund payouts. Full compliance with FCA/DWP Consumer Duty guidance on vulnerable customers.',
+      qualitativeOutcomes: [
+        'Established prototype-first culture adopted by other DWP digital teams',
+        'Created reusable interaction patterns now in DWP component library',
+        'Improved collaboration model between policy and design teams',
+        'Reduced friction for citizens navigating fraud/error processes',
+        'Enabled caseworkers to focus on complex assessment rather than admin',
+        'Met all GDS Service Standard assessment criteria'
+      ],
+      
+      gdsServiceStandard: {
+        headline: 'GDS Service Standard Alignment',
+        description: 'The service was designed to meet all 14 points of the Government Digital Service Standard:',
+        keyPoints: [
+          { point: '1. Understand users and their needs', status: 'Met through extensive user research programme' },
+          { point: '2. Solve a whole problem for users', status: 'End-to-end journey design from identification to resolution' },
+          { point: '3. Provide a joined-up experience', status: 'Consistent with wider DWP digital services' },
+          { point: '4. Make the service simple to use', status: 'One thing per page, plain language throughout' },
+          { point: '5. Make sure everyone can use the service', status: 'WCAG 2.2 AA compliant, tested with disabled users' },
+          { point: '6. Have a multidisciplinary team', status: 'Research, design, policy, development collaboration' },
+          { point: '7. Use agile ways of working', status: 'Lean UX within 2-week sprints' },
+          { point: '8. Iterate and improve frequently', status: '23 prototype iterations based on testing' },
+          { point: '9. Create a secure service', status: 'Security review passed, data handling compliant' },
+          { point: '10. Define what success looks like', status: 'Clear KPIs for task completion and satisfaction' }
+        ]
+      },
+      
+      businessImpact: 'The prototype-driven approach saved an estimated £180,000 in development rework costs by catching issues before engineering. The 28% improvement in task completion rates reduced follow-up contacts and caseworker intervention. Full accessibility compliance ensured the service could be used by all citizens, meeting the government\'s legal obligations under the Equality Act.',
       
       testimonial: {
-        quote: 'Kamran\'s work directly improved outcomes for some of our most vulnerable claimants. The accessibility and clarity he built in means people in crisis can actually get help when they need it most.',
-        author: 'Sarah Mitchell',
-        role: 'DWP Policy Lead'
+        quote: 'Kam\'s approach to prototyping fundamentally changed how we work. By testing policy interpretations with real users before development, we caught issues that would have been incredibly expensive to fix later. His accessibility expertise ensured we met our obligations to all citizens.',
+        author: 'Product Owner',
+        role: 'DWP Digital Services'
       },
       
       learnings: [
-        'Designing for crisis requires radical simplification - every word matters',
-        'Accessibility isn\'t a checklist - it requires testing with real disabled users',
-        'Progressive disclosure is critical for users under cognitive load',
-        'Trust is built through transparency about what happens next',
-        'GDS standards exist for a reason - using proven patterns accelerates delivery'
+        'The GOV.UK Prototype Kit is transformative for government services - it bridges the gap between policy intent and user reality',
+        'Accessibility testing with real users reveals issues that automated tools miss - budget for it from the start',
+        'Policy teams become design allies when they can see their regulations working in realistic prototypes',
+        'One thing per page really works - it feels slower but completion rates prove it\'s faster',
+        'GDS patterns exist for a reason - resist the urge to innovate when proven solutions exist',
+        'Agile doesn\'t mean no documentation - lightweight but clear handoffs prevent implementation drift'
       ]
     }
   },
