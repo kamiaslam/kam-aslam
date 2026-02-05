@@ -149,7 +149,7 @@ export const projects = [
   {
     id: '02',
     slug: 'dwp-fraud-error-system',
-    title: 'Fraud & Error Benefit System',
+    title: 'DWP - Fraud & Error Benefit System',
     category: 'Government / Public Sector',
     client: 'Department for Work and Pensions (DWP) via Coforge',
     year: '2023-2024',
@@ -159,12 +159,12 @@ export const projects = [
     challenge: 'The DWP needed to digitise complex fraud and error benefit processes while ensuring accessibility for all citizens, including vulnerable users. Existing workflows were paper-based, inconsistent across regions, and difficult to navigate. The challenge was translating intricate policy regulations into intuitive digital services that met stringent GDS Service Standards and WCAG 2.2 accessibility requirements.',
     solution: 'Built end-to-end service journeys using the GOV.UK Prototype Kit to test policy interpretations and UI options before any engineering commitment. Conducted extensive moderated and unmoderated usability testing to refine content design, interaction patterns, and error states. Collaborated closely with policy teams to translate complex regulations into user-centred flows. Applied Design Thinking and Lean UX methodologies within agile delivery teams to ensure rapid iteration based on real user feedback.',
     outcome: '35% reduction in development rework through prototype-driven validation. 28% improvement in task completion rates. Full WCAG 2.2 AA accessibility compliance verified through independent audit. Successfully aligned service with GDS Service Standard, passing all 14 points. Established reusable interaction patterns adopted by other DWP digital teams.',
-    image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/dwp-caxton-house.png',
     details: ['GDS Standards', 'WCAG 2.2', 'GOV.UK Prototype Kit', 'User Research', 'Service Design'],
     screens: [
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1553484771-8bbd4e16a09c?w=800&h=600&fit=crop'
+      '/images/dwp-authenticate-signin.png',
+      '/images/dwp-affinity-map.png',
+      '/images/dwp-prototype-kit-training.png'
     ],
     
     extended: {

@@ -356,6 +356,59 @@ export default function ProjectDetailClient({ project, nextProject }) {
         </section>
       )}
 
+      {/* GOV.UK Prototype Kit Section */}
+      {hasExtended && project.extended.govukPrototypeKit && (
+        <section className="py-24 bg-[#0b0c0c] text-white">
+          <Container>
+            <div className="grid md:grid-cols-12 gap-12 items-start">
+              <div className="md:col-span-5">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-white rounded flex items-center justify-center">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                      <path d="M0 0h32v32H0z" fill="#0b0c0c"/>
+                      <path d="M6 6h8v8H6zM18 6h8v8h-8zM6 18h8v8H6zM18 18h8v8h-8z" fill="#fff"/>
+                    </svg>
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">GOV.UK</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-serif mb-6">{project.extended.govukPrototypeKit.headline}</h3>
+                <p className="text-gray-300 leading-relaxed">{project.extended.govukPrototypeKit.description}</p>
+              </div>
+              
+              <div className="md:col-span-7 space-y-8">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+                  <h4 className="font-bold text-lg mb-4">Why Prototype-Driven Design?</h4>
+                  <ul className="space-y-3">
+                    {project.extended.govukPrototypeKit.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-300">
+                        <span className="w-5 h-5 rounded bg-[#00703c] flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="bg-white/5 border border-white/10 rounded-xl p-8">
+                  <h4 className="font-bold text-lg mb-4">Technical Approach</h4>
+                  <ul className="space-y-2">
+                    {project.extended.govukPrototypeKit.technicalApproach.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-400 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gray-500 mt-2 flex-shrink-0"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Solution Details Section */}
       {hasExtended && project.extended.solutionDetails && (
         <section className="py-24 bg-gray-50">
@@ -427,6 +480,53 @@ export default function ProjectDetailClient({ project, nextProject }) {
                   </ul>
                 </div>
               </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Usability Testing Section */}
+      {hasExtended && project.extended.usabilityTesting && (
+        <section className="py-24 bg-gray-50">
+          <Container>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 block">Validation</span>
+              <h3 className="text-3xl md:text-4xl font-serif">{project.extended.usabilityTesting.headline}</h3>
+            </div>
+            
+            <div className="space-y-8">
+              {project.extended.usabilityTesting.rounds.map((round, i) => (
+                <div key={i} className="bg-white rounded-xl p-8 shadow-sm">
+                  <div className="flex flex-col md:flex-row md:items-center gap-6 mb-6">
+                    <div className="flex items-center gap-4">
+                      <span className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold">
+                        {i + 1}
+                      </span>
+                      <div>
+                        <h4 className="font-bold text-xl">{round.phase}</h4>
+                        <p className="text-sm text-gray-500">{round.participants} participants • {round.method}</p>
+                      </div>
+                    </div>
+                    <div className="md:ml-auto">
+                      <span className="inline-block px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">
+                        {round.focus}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h5 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Key Findings & Changes</h5>
+                    <ul className="grid md:grid-cols-3 gap-4">
+                      {round.keyFindings.map((finding, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                          {finding}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </Container>
         </section>
